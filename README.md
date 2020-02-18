@@ -1,5 +1,7 @@
 # OwlZero - Monte Carlo Tree Search Machine Learner
 
+Copyright (C) 2020 WushuWorks
+
 OwlZero is a Monte Carlo Tree Searching AI applied to the game of Gothello.
 
 The full project page and demo can be found [here](https://www.wushuworks.com/ai/owlzero).
