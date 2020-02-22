@@ -21,7 +21,7 @@ in some difficult problem spaces is Monte Carlo Tree Search (MCTS).
 
 Runtime complexity of MCTS is `O(mkl/C)` where 
 * m is the number of children of a node explored, from 1 - 25 (max)
-* k is the number of possible 'simulations' of a child from 0 - 25, where 0 is the `pass` child state
+* k is the number of parallel searches
 * l is the number of rollout iterations
 * C is the number of available CPU cores
 
@@ -30,8 +30,8 @@ The notable takeaway here is that the runtime is pseudo-polynomial. Since a roug
 
 ## Experiment
 
-If we fix `m` and `k` to always select the maximum values and we run experiments on an AMD Ryzen 7 3700X CPU with 8 cores
-and 16 threads we can analyze how the number of rollouts affects performance.
+If we fix `m` to always find all children, do not implement parallel searches (i.e. `k`) and we run experiments 
+on an AMD Ryzen 7 3700X CPU with 8 cores and 16 threads we can analyze how the number of rollouts affects performance.
 
 Our experiment tests the performance of MCTS under the following conditions.
 
@@ -59,5 +59,5 @@ Time taken to finish a game is linear and we have the following average times to
 ## Conclusion
 
 The experimental results confirm our hypothesis that Monte Carlo Tree Search is an effective algorithm for games with
-large branching factors, especially considering games with similar branching factors like 
-[Fanorona](https://en.wikipedia.org/wiki/Fanorona) are in EXPTIME.
+large branching factors, especially considering generalized games with similar branching factors like 
+[Fanorona](https://dke.maastrichtuniversity.nl/m.winands/documents/Fanorona.pdf) are in EXPTIME.
