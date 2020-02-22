@@ -60,5 +60,4 @@ Time taken to finish a game is linear and we have the following average times to
 ## Conclusion
 
 The experimental results confirm our hypothesis that Monte Carlo Tree Search is an effective algorithm for games with
-large branching factors, especially considering generalized games with similar branching factors like 
-[Fanorona](https://dke.maastrichtuniversity.nl/m.winands/documents/Fanorona.pdf) are in EXPTIME.
+large branching factors.
