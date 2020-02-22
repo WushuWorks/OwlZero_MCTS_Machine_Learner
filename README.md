@@ -25,8 +25,9 @@ Runtime complexity of MCTS is `O(mkl/C)` where
 * l is the number of rollout iterations
 * C is the number of available CPU cores
 
-The notable takeaway here is that the runtime is pseudo-polynomial. Since a rough state size estimate of Gothello is 
-25 choose 12 and our branching factor is estimated to be 13, this will be a feasible experiment.
+The notable takeaway here is that the runtime is pseudo-polynomial since our runtime will be dominated by the number of 
+rollouts we do. Since a rough state size estimate of Gothello is 25 choose 12 and our branching factor is estimated to 
+be 13, this will be a feasible experiment.
 
 ## Experiment
 
